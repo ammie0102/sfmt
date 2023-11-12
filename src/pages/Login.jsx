@@ -95,7 +95,7 @@ const Login = () => {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Something went wrong!",
+        text: "Password or email is incorrect!",
       });
     }
   };
