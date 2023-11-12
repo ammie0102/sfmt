@@ -24,12 +24,12 @@ function App() {
           <Route path="/food" element={<Foods />} />
           <Route path="/order" element={<Orders />} />
           <Route path="/records" element={<div>Records</div>} />
-          <Route path="/delivery" element={<div>Delivery</div>} />
+          {/* <Route path="/delivery" element={<div>Delivery</div>} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Registration />} />
           {/* <Route path="/riders" element={<Riders />} />
           <Route path="/cart" element={<Cart />} /> */}
-          <Route path="/contact" element={<Contact us />} />
+          <Route path="/contact" element={<Contact Us />} />
         </Routes>
       </BrowserRouter>
     </div>
