@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Logo from "../assets/img/logo.png";
+import Logo from "../assets/img/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
@@ -49,10 +49,17 @@ const Navbar = () => {
     setIsScrolled(window.scrollY > 100);
   });
 
+  const [isOnMenu, setIsOnMenu] = useState(false);
+  useEffect(() => {
+    if (window.location.pathname === "/menu") {
+      setIsMenuOpen(true);
+    }
+  }, []);
+
   const links = [
     {
       name: "Home",
-      url: "/home",
+      url: "#home",
     },
     {
       name: "Menu",
@@ -60,11 +67,11 @@ const Navbar = () => {
     },
     {
       name: "About",
-      url: "/about",
+      url: "#about",
     },
     {
       name: "Contact Us",
-      url: "/contact",
+      url: "#contact",
     },
   ];
   return (
@@ -127,6 +134,7 @@ const Navbar = () => {
                   src={Logo}
                   alt="Santa Fe Taguktukan Logo"
                 />
+
                 <h1 className="text-white font-black text-3xl text-yellow-300 outline-black text-stroke hidden sm:block">
                   Santa Fe Taguktukan
                 </h1>
@@ -134,17 +142,41 @@ const Navbar = () => {
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-1">
-                {links.map((link) => (
+                {setIsOnMenu ? (
                   <Link
-                    to={link.url}
-                    key={link.name}
+                    to="/"
                     className={
                       "text-white hover:bg-yellow-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium transition duration-100 ease-in-out"
                     }
                   >
-                    {link.name}
+                    Home
                   </Link>
-                ))}
+                ) : (
+                  <a
+                    href="#home"
+                    className="text-white hover:bg-yellow-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium transition duration-100 ease-in-out"
+                  ></a>
+                )}
+                <Link
+                  to="/menu"
+                  className={
+                    "text-white hover:bg-yellow-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium transition duration-100 ease-in-out"
+                  }
+                >
+                  Menu
+                </Link>
+                <a
+                  href="#about"
+                  className="text-white hover:bg-yellow-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium transition duration-100 ease-in-out"
+                >
+                  About
+                </a>
+                <a
+                  href="#contact"
+                  className="text-white hover:bg-yellow-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium transition duration-100 ease-in-out"
+                >
+                  Contact
+                </a>
               </div>
             </div>
           </div>
@@ -186,14 +218,15 @@ const Navbar = () => {
                   >
                     {customer.customerfirstname} {customer.customerlastname}
                   </p>
-                  <p
+                  <Link
+                    to="/profile"
                     className="block px-4 py-2 text-sm text-gray-700"
                     role="menuitem"
                     tabIndex="-1"
                     id="user-menu-item-1"
                   >
-                    Settings
-                  </p>
+                    Profile
+                  </Link>
                   <p
                     className="block px-4 py-2 text-sm text-gray-700"
                     role="menuitem"

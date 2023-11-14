@@ -4,51 +4,51 @@
 @tailwind utilities;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 .navbrand {
-    user-select: none;
+  user-select: none;
 }
 .text-stroke {
-    -webkit-text-stroke: 1px #000;
+  -webkit-text-stroke: 1px #000;
 }
 
 .offer-card {
-    background-color: rgba(0, 0, 0, 0.2);
-    transition: background-color 0.1s ease-in-out;
-    user-select: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: background-color 0.1s ease-in-out;
+  user-select: none;
 }
 
 .offer-card:hover {
-    background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .offer-card .content h1 {
-    text-shadow: 0rem 0.125rem #000;
+  text-shadow: 0rem 0.125rem #000;
 }
 
 .main::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
+  width: 12px; /* Width of the scrollbar */
 }
 
 .main::-webkit-scrollbar-thumb {
-    background-color: red; /* Color of the thumb */
-    border-radius: 0; /* Rounded corners of the thumb */
+  background-color: red; /* Color of the thumb */
+  border-radius: 0; /* Rounded corners of the thumb */
 }
 
 .main::-webkit-scrollbar-track {
-    background-color: transparent; /* Color of the track */
+  background-color: transparent; /* Color of the track */
 }
 
 #map {
-    height: 180px;
+  height: 180px;
 }
 
 /* Add margin below the search input */
 .dataTables_wrapper .dataTables_filter input {
-    margin-bottom: 10px; /* Adjust as needed */
+  margin-bottom: 10px; /* Adjust as needed */
 }

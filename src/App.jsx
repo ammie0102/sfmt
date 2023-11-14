@@ -27,9 +27,8 @@ function App() {
           {/* <Route path="/delivery" element={<div>Delivery</div>} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Registration />} />
-          {/* <Route path="/riders" element={<Riders />} />
-          <Route path="/cart" element={<Cart />} /> */}
-          <Route path="/contact" element={<Contact Us />} />
+          <Route path="/riders" element={<Riders />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
     </div>

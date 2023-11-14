@@ -328,9 +328,6 @@ const Menu = () => {
                     Pork
                   </li>
                   <li className="px-2 py-1 text-sm font-medium text-gray-900 bg-gray-200 rounded-lg">
-                    Drinks
-                  </li>
-                  <li className="px-2 py-1 text-sm font-medium text-gray-900 bg-gray-200 rounded-lg">
                     Best Seller
                   </li>
                 </ul>
@@ -356,7 +353,7 @@ const Menu = () => {
                               className="object-cover w-full h-full rounded-t-lg"
                             />
                           </div>
-                          <div className="food-menu-info-container p-4">
+                          <div className="food-menu-info-container p-4 ">
                             <div className="food-menu-name-container">
                               <h3 className="text-lg font-medium text-gray-900">
                                 {food.foodmenuname}
@@ -535,7 +532,7 @@ const Menu = () => {
                     </ul>
                   )}
 
-                  {/* Subtoal and Delivery Fee */}
+                  {/* Subtotal and Delivery Fee */}
                   <hr className="my-2 border-b-1 border-gray-300" />
                   <div className="flex flex-row justify-between items-center mt-4">
                     <p className="text-sm text-gray-500">Subtotal</p>
