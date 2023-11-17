@@ -10,10 +10,12 @@ import { Link } from "react-router-dom";
 const Home = () => {
   const cards = [
     {
-      title: "",
-      //   description:
-      //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      title: "Pork Dishes",
       img: porkImg,
+    },
+    {
+      title: "Chicken Dishes",
+      img: chickenImg,
     },
   ];
 
@@ -67,16 +69,16 @@ const Home = () => {
               Indulge in our exquisite selection of top-selling chicken and pork
               delicacies.
             </p>
-            <div className="grid grid-cols-2 gap-1 mt-5">
+            <div className="grid grid-cols-2 gap-1 mt-5 flex w-full">
               {cards.map((card, index) => (
                 <div
-                  className="offer-card sm:h-[50vh] relative overflow-hidden shadow-md h-[15rem] w-full"
+                  className="offer-card sm:h-[50vh] relative overflow-hidden shadow-md h-[15rem]"
                   key={index}
                 >
                   <div className="rounded-md shadow-md p-5 relative h-full">
                     <img
                       src={card.img}
-                      alt=""
+                      alt="product"
                       className="w-full absolute top-0 left-0"
                       style={{
                         height: "100%",
@@ -84,13 +86,15 @@ const Home = () => {
                         zIndex: -1,
                       }}
                     />
-                    <div className="content flex justify-center flex space-x-2">
-                      <h1 className="sm:text-5xl font-black text-white mb-4 text-4xl flex justify-center object-cover h-48 w-96">
+                    <div className="flex flex-col h-screen justify-between items-middle">
+                      <h1 className="sm:text-5xl font-black text-white mb-4 text-4xl flex justify-center object-flex h-48 w-96">
                         {card.title}
                       </h1>
-                      <button className="bg-white text-red-500 decoration-double rounded-full py-2 px-4 border border-yellow-500 hover:bg-blue-500 hover:text-white transition duration-300 ease-in-out uppercase">
-                        Buy Now
-                      </button>
+                      <div className="flex-grow">
+                        <button className="hover:bg-red-600 text-red-600 hover:text-yellow-300 rounded-md px-4 py-2 text-base font-medium border border-red-600 transition duration-100 ease-in-out uppercase">
+                          Buy Now
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -141,12 +145,12 @@ const Home = () => {
               </a>
             </div>
           </div>
-          <div className="bg-red-400">
+          <div className="bg-red-500">
             <h1 className="font-semibold text-3xl text-center mb-5  mt-5">
               Our Values
             </h1>
           </div>
-          <div className="flex gap-5 justify-center">
+          <div className="flex gap-5 justify-center pb-5  ">
             <a
               href="#"
               className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 border-6 border-yellow-500 bg-orange-300"
@@ -190,12 +194,13 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="bg-gray-100 p-8" id="contact">
+        <section className="bg-red-100 p-8 py-0.5" id="contact">
           <div className="max-w-screen-xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-red-500">
-              Contact Us
-            </h2>
-
+            <div className="bg-red-500">
+              <h2 className="text-3xl font-bold text-gray-800 mb-6 text-yellow-200 text-center">
+                Contact Us
+              </h2>
+            </div>
             <div className="flex flex-col md:flex-row md:space-x-6">
               <div className="flex-1">
                 <h3 className="text-1 font-semibold mb-4">Contact Details</h3>
