@@ -101,34 +101,32 @@ const Login = () => {
   };
 
   return (
-    <section className="login bg-blue-100">
-      <div className="container mx-auto px-4 min-h-screen relative">
-        <form className="login-form bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-md">
+    <section className="login bg-white-100">
+      <div className="container mx-auto px-4 min-h-screen relative ">
+        <form className="login-form bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-md border border-4 border-yellow-400 bg-yellow-300">
           <div className="mb-4">
-            <h4 className="text-2xl font-bold mb-1">Login</h4>
+            <h4 className="text-2xl font-bold mb-1">Hello, Welcome!</h4>
             <p className="text-sm text-gray-500 mb-4">
               Don't have an account?{" "}
-              <Link
-                className="text-blue-500 hover:text-blue-700"
-                to="/register"
-              >
+              <Link className="text-red-500 hover:text-blue-700" to="/register">
                 Register
               </Link>
             </p>
           </div>
+
           <div className="mb-4">
             <label
               for="contact_number"
               className="block text-sm font-medium text-gray-700 mb-1"
             >
-              Contact Number
+              Contact Number / Email
             </label>
             <input
               type="text"
               id="contact_number"
               name="contact_number"
               autocomplete="contact_number"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 outline-none"
+              className="bg-gray-50 border border-black border-3 text-gray-900 text-sm rounded-lg block w-full p-2.5 outline-none"
               placeholder="e.g. 09123456789"
               value={customerContactNumber}
               onChange={(e) => setCustomerContactNumber(e.target.value)}
@@ -147,7 +145,7 @@ const Login = () => {
                 type={showPassword ? "text" : "password"}
                 id="password"
                 name="password"
-                className="border border-gray-300 text-gray-900 text-sm block w-full p-2.5 outline-none"
+                className="border border-black text-gray-900 text-sm block w-full p-2.5 outline-none border-3 flex rounded-lg"
                 placeholder="Enter password"
                 value={customerPassword}
                 onChange={(e) => setCustomerPassword(e.target.value)}
@@ -165,11 +163,12 @@ const Login = () => {
               </label>
             </div>
           </div>
+
           <div>
             <button
               onClick={login}
               type="button"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full"
+              className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded w-full"
             >
               Login
             </button>

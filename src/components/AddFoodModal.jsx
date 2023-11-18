@@ -53,14 +53,14 @@ const AddFoodModal = ({ showModal, setShowModal, setReload }) => {
     formData.append("foodMenuDescription", foodMenuDescription);
     formData.append("foodMenuCategory", foodMenuCategory);
 
-    // const foodData = {
-    //     foodMenuID: Math.random().toString(36).substr(2, 9),
-    //     foodMenuName: foodName,
-    //     foodMenuDescription: foodMenuDescription,
-    //     foodMenuCategory: foodMenuCategory,
-    //     foodMenuImage: foodMenuImage,
-    // };
-    // console.log(foodData);
+    const foodData = {
+      foodMenuID: Math.random().toString(36).substr(2, 9),
+      foodMenuName: foodName,
+      foodMenuDescription: foodMenuDescription,
+      foodMenuCategory: foodMenuCategory,
+      foodMenuImage: foodMenuImage,
+    };
+    console.log(foodData);
 
     const response = fetch("http://localhost:7722/food/add", {
       method: "POST",

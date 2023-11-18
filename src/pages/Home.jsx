@@ -186,9 +186,9 @@ const Home = () => {
                 Goals
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
-                To have a strong relationship with the consumers. ​ To build up
-                new partnership for the future expansion. ​ To provide
-                employment opportunities.
+                To have a strong relationship with the consumers. To build up
+                new partnership for the future expansion. To provide employment
+                opportunities.
               </p>
             </a>
           </div>

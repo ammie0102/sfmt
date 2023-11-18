@@ -11,7 +11,7 @@ import AddressModal from "../components/AddressModal";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import menubgImg from "../assets/img/menubg.png";
+import menuImg from "../assets/img/menu.jpg";
 
 const Menu = () => {
   const [foods, setFoods] = useState([]);
@@ -25,8 +25,6 @@ const Menu = () => {
   const [customerID, setCustomerID] = useState("");
 
   const [branchLocation, setBranchLocation] = useState([]);
-
-  const [rider, setRider] = useState([]);
 
   useEffect(() => {
     setCustomerID(localStorage.getItem("userID"));
@@ -273,7 +271,7 @@ const Menu = () => {
             <div className="food-menu-container border border-red-500 h-full w-[64%] p-4 overflow-y-auto">
               {/* Banner */}
               <div className="santa-fe-banner bg-gray-200 h-[12rem] ">
-                <img src={menubgImg} className="h-[12rem] object-fit" />
+                <img src={menuImg} className="h-[12rem] w-full" />
               </div>
 
               {/* Search Bar */}

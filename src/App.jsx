@@ -8,7 +8,6 @@ import Foods from "./pages/Foods";
 import Login from "./pages/Login";
 import Registration from "./pages/Registration";
 import Orders from "./pages/Orders";
-import Riders from "./pages/Riders";
 import Cart from "./pages/Cart";
 
 function App() {
@@ -27,7 +26,6 @@ function App() {
           {/* <Route path="/delivery" element={<div>Delivery</div>} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Registration />} />
-          <Route path="/riders" element={<Riders />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
